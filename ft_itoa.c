@@ -6,7 +6,7 @@
 /*   By: tamori <tamori@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 22:21:44 by tamori            #+#    #+#             */
-/*   Updated: 2024/01/11 21:14:09 by tamori           ###   ########.fr       */
+/*   Updated: 2024/01/11 22:22:33 by tamori           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static unsigned int	ft_number_size(int number)
 char	*ft_itoa(int n)
 {
 	char		*string;
-	unsigned int	number;
+	long int	number;
 	unsigned int	length;
 
 	number = n;
@@ -40,10 +40,10 @@ char	*ft_itoa(int n)
 	string = (char *)malloc(sizeof(char) * (length + 1));
 	if (string == NULL)
 		return (NULL);
-	if (number < 0)
+	if (n < 0)
 	{
 		string[0] = '-';
-		number = -n;
+		number = -number;
 	}
 	else
 		number = n;

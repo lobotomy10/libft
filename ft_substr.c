@@ -6,7 +6,7 @@
 /*   By: tamori <tamori@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 22:17:34 by tamori            #+#    #+#             */
-/*   Updated: 2024/01/09 22:17:43 by tamori           ###   ########.fr       */
+/*   Updated: 2024/01/11 21:55:38 by tamori           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	j;
 	char	*str;
 
+	if (s == 0)
+		return (NULL);
 	str = (char *)malloc(sizeof(*s) * (len + 1));
 	if (str == 0)
 		return (NULL);

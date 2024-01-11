@@ -6,7 +6,7 @@
 /*   By: tamori <tamori@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 22:28:14 by tamori            #+#    #+#             */
-/*   Updated: 2024/01/09 22:28:39 by tamori           ###   ########.fr       */
+/*   Updated: 2024/01/11 22:23:51 by tamori           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
+	if ((s == NULL) || (fd < 0))
+		return ;
 	write(fd, s, ft_strlen(s));
 }
