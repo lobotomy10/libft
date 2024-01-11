@@ -6,7 +6,7 @@
 /*   By: tamori <tamori@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 21:46:43 by tamori            #+#    #+#             */
-/*   Updated: 2024/01/09 22:32:36 by tamori           ###   ########.fr       */
+/*   Updated: 2024/01/11 21:05:58 by tamori           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_memmove(void *s1, const void *s2, size_t n)
 {
 	size_t	len;
 
+	if (s1 == NULL && s2 == NULL)
+		return (NULL);
 	len = 0;
 	if (s2 < s1)
 	{
@@ -38,10 +40,13 @@ void	*ft_memmove(void *s1, const void *s2, size_t n)
 	return (s1);
 }
 
+// #include <stdio.h>
+// #include <string.h>
 // int main(){
 // 	char str[50] = "This is the moved String"; 
 // 	char dest[50];
-
-// 	ft_memmove(dest, str, strlen(str)+1);
+// 	memmove(dest, str, 3);
+// 	printf("Copied string: %s\n", dest);
+// 	ft_memmove(dest, str, 3);
 // 	printf("Copied string: %s\n", dest);
 // }

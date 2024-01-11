@@ -6,7 +6,7 @@
 /*   By: tamori <tamori@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 21:48:34 by tamori            #+#    #+#             */
-/*   Updated: 2024/01/11 20:11:17 by tamori           ###   ########.fr       */
+/*   Updated: 2024/01/11 20:33:49 by tamori           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,3 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 // 	printf("%s", dest);
 // 	printf("%s", dest);		
 // }
-

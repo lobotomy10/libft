@@ -6,16 +6,16 @@
 /*   By: tamori <tamori@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 21:52:33 by tamori            #+#    #+#             */
-/*   Updated: 2024/01/09 22:34:29 by tamori           ###   ########.fr       */
+/*   Updated: 2024/01/11 20:38:48 by tamori           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int i)
+int	ft_toupper(int i)
 {
-	if (i >= 'A' && i <= 'Z')
-		return (i + 32);
+	if (i >= 'a' && i <= 'z')
+		return (i - 32);
 	return (i);
 }
 

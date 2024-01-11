@@ -6,7 +6,7 @@
 /*   By: tamori <tamori@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 22:14:34 by tamori            #+#    #+#             */
-/*   Updated: 2024/01/11 19:45:54 by tamori           ###   ########.fr       */
+/*   Updated: 2024/01/11 21:15:36 by tamori           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strdup(const char *s)
 	i = 0;
 	j = ft_strlen(s);
 	str = (char *)malloc(sizeof(*str) * (j + 1));
+	if (str == NULL)
+		return (NULL);
 	while (i < j)
 	{
 		str[i] = s[i];
