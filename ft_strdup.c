@@ -6,9 +6,11 @@
 /*   By: tamori <tamori@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 22:14:34 by tamori            #+#    #+#             */
-/*   Updated: 2024/01/09 22:14:44 by tamori           ###   ########.fr       */
+/*   Updated: 2024/01/11 19:45:54 by tamori           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strdup(const char *s)
 {

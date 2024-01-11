@@ -6,13 +6,13 @@
 /*   By: tamori <tamori@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 21:02:14 by tamori            #+#    #+#             */
-/*   Updated: 2024/01/09 22:32:09 by tamori           ###   ########.fr       */
+/*   Updated: 2024/01/11 19:43:13 by tamori           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(char c)
+int	ft_isdigit(int c)
 {
 	if ('0' <= c && c <= '9')
 		return (1);

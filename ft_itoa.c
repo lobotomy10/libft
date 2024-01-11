@@ -6,7 +6,7 @@
 /*   By: tamori <tamori@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 22:21:44 by tamori            #+#    #+#             */
-/*   Updated: 2024/01/09 22:24:03 by tamori           ###   ########.fr       */
+/*   Updated: 2024/01/11 19:46:44 by tamori           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ char	*ft_itoa(int n)
 	unsigned int	number;
 	unsigned int	length;
 
+	number = n;
 	length = ft_number_size(n);
 	string = (char *)malloc(sizeof(char) * (length + 1));
 	if (string == NULL)

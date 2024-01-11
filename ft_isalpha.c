@@ -6,15 +6,15 @@
 /*   By: tamori <tamori@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 19:24:34 by tamori            #+#    #+#             */
-/*   Updated: 2024/01/09 22:31:59 by tamori           ###   ########.fr       */
+/*   Updated: 2024/01/11 19:43:02 by tamori           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(char x)
+int	ft_isalpha(int i)
 {
-	if (('A' < x && x < 'Z') || ('a' < x && x < 'z'))
+	if (('A' < i && i < 'Z') || ('a' < i && i < 'z'))
 		return (1);
 	return (0);
 }
