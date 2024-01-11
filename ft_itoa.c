@@ -6,7 +6,7 @@
 /*   By: tamori <tamori@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 22:21:44 by tamori            #+#    #+#             */
-/*   Updated: 2024/01/11 22:22:33 by tamori           ###   ########.fr       */
+/*   Updated: 2024/01/12 00:33:09 by tamori           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,17 +29,9 @@ static unsigned int	ft_number_size(int number)
 	return (length);
 }
 
-char	*ft_itoa(int n)
+long int	split_function(int n, char *string,
+	long int number)
 {
-	char		*string;
-	long int	number;
-	unsigned int	length;
-
-	number = n;
-	length = ft_number_size(n);
-	string = (char *)malloc(sizeof(char) * (length + 1));
-	if (string == NULL)
-		return (NULL);
 	if (n < 0)
 	{
 		string[0] = '-';
@@ -47,6 +39,21 @@ char	*ft_itoa(int n)
 	}
 	else
 		number = n;
+	return (number);
+}
+
+char	*ft_itoa(int n)
+{
+	char			*string;
+	long int		number;
+	unsigned int	length;
+
+	number = n;
+	length = ft_number_size(n);
+	string = (char *)malloc(sizeof(char) * (length + 1));
+	if (string == NULL)
+		return (NULL);
+	number = split_function(n, string, number);
 	if (number == 0)
 		string[0] = '0';
 	string[length] = '\0';

@@ -6,7 +6,7 @@
 /*   By: tamori <tamori@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 21:02:53 by tamori            #+#    #+#             */
-/*   Updated: 2024/01/09 22:31:41 by tamori           ###   ########.fr       */
+/*   Updated: 2024/01/12 00:20:22 by tamori           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-     ft_memset(s, 0, n);
+	ft_memset(s, 0, n);
 }
 
 // int main() {

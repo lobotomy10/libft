@@ -6,13 +6,14 @@
 /*   By: tamori <tamori@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 21:02:03 by tamori            #+#    #+#             */
-/*   Updated: 2024/01/09 22:32:04 by tamori           ###   ########.fr       */
+/*   Updated: 2024/01/12 00:21:07 by tamori           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int a){
+int	ft_isascii(int a)
+{
 	if (0 <= a && a <= 127)
 		return (1);
 	return (0);

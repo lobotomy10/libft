@@ -6,27 +6,18 @@
 /*   By: tamori <tamori@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 22:17:34 by tamori            #+#    #+#             */
-/*   Updated: 2024/01/11 22:55:28 by tamori           ###   ########.fr       */
+/*   Updated: 2024/01/12 00:25:08 by tamori           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+size_t	split_fun_while(char const *s
+	, unsigned int start, size_t len, char *str)
 {
 	size_t	i;
 	size_t	j;
-	char	*str;
-	size_t copy_len;
 
-	copy_len = 0;
-	if (s == 0)
-		return (NULL);
-	while (copy_len < len && s[copy_len + start] != '\0')
-		copy_len++;
-	str = (char *)malloc(sizeof(char) * (copy_len + 1));
-	if (str == 0)
-		return (NULL);
 	i = 0;
 	j = 0;
 	while (s[i])
@@ -38,6 +29,24 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		}
 		i++;
 	}
+	return (j);
+}
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
+{
+	char	*str;
+	size_t	copy_len;
+	size_t	j;
+
+	copy_len = 0;
+	if (s == 0)
+		return (NULL);
+	while (copy_len < len && s[copy_len + start] != '\0')
+		copy_len++;
+	str = (char *)malloc(sizeof(char) * (copy_len + 1));
+	if (str == 0)
+		return (NULL);
+	j = split_fun_while(s, start, len, str);
 	str[j] = 0;
 	return (str);
 }

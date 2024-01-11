@@ -6,7 +6,7 @@
 /*   By: tamori <tamori@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 22:07:19 by tamori            #+#    #+#             */
-/*   Updated: 2024/01/12 00:02:41 by tamori           ###   ########.fr       */
+/*   Updated: 2024/01/12 00:18:49 by tamori           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	neg;
+	int		i;
+	int		neg;
 	long	res;
 
 	i = 0;
@@ -36,14 +36,10 @@ int	ft_atoi(const char *str)
 	{
 		if (neg == 1 && res > (LONG_MAX - (str[i] - '0')) / 10)
 			return ((int)LONG_MAX);
-		if (neg == -1 && -res < (LONG_MIN + (str[i] - '0')) / 10)
+		if (neg == -1 && - res < (LONG_MIN + (str[i] - '0')) / 10)
 			return ((int)LONG_MIN);
 		res = (str[i] - '0') + (res * 10);
 		i++;
 	}
 	return (res * neg);
 }
-
-// int main(){
-// 	printf("%d %d %d\n",atoi("9223372036854775808"), ft_atoi("9223372036854775808"), (int)LONG_MAX);
-// }
