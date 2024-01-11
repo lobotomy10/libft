@@ -1,2 +1,4 @@
 *.o
 libft-unit-test/
+libftTester/
+libft-tester-tokyo/

@@ -6,7 +6,7 @@
 /*   By: tamori <tamori@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 21:56:25 by tamori            #+#    #+#             */
-/*   Updated: 2024/01/09 22:34:16 by tamori           ###   ########.fr       */
+/*   Updated: 2024/01/11 22:45:17 by tamori           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)s + i);
 	while (i >= 0)
 	{
-		if (s[i] == c)
+		if (s[i] == (char)c)
 			return ((char *)s + i);
 		i--;
 	}

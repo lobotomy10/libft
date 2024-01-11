@@ -6,7 +6,7 @@
 /*   By: tamori <tamori@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 22:32:59 by tamori            #+#    #+#             */
-/*   Updated: 2024/01/09 22:33:27 by tamori           ###   ########.fr       */
+/*   Updated: 2024/01/11 23:00:42 by tamori           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,16 +66,20 @@ static char	*ft_stralloc(char *str, char c, int *k)
 {
 	char	*word;
 	int		j;
-
+	size_t len;
 	j = *k;
 	word = NULL;
 	while (str[*k] != '\0')
 	{
 		if (str[*k] != c)
 		{
+			len = 0;
 			while (str[*k] != '\0' && str[*k] != c)
+			{
+				len++;
 				*k += 1;
-			word = (char *)malloc(sizeof(char) * (*k + 1));
+			}
+			word = (char *)malloc(sizeof(char) * (len + 1));
 			if (word == NULL)
 				return (NULL);
 			break ;
